@@ -1,116 +1,324 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex">
-<meta name="theme-color" content="#05060f">
-<title>ROCKY BHAI OFFICIAL</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-:root{
-&#x20;&#x20;--void:var(--lp-bg,#05060f);--void2:var(--lp-bg2,#0a0b1c);--panel:var(--lp-bg2,#0d0f24);--tail:var(--lp-bg,#0b0817);
-&#x20;&#x20;--monarch:var(--lp1,#7c3aed);--monarch2:var(--lp1-soft,#a855f7);--arcane:var(--lp2,#3b82f6);--arcane2:var(--lp2-soft,#38bdf8);
-&#x20;&#x20;--m-rgb:var(--lp1-rgb,124,58,237);--m2-rgb:var(--lp1-rgb,168,85,247);--a-rgb:var(--lp2-rgb,59,130,246);--a2-rgb:var(--lp2-rgb,56,189,248);
-&#x20;&#x20;--spectral:#e8e6ff;--muted:#9aa0d4;--deep:var(--lp1-deep,#6d28d9);--tint:var(--lp1-soft,#cbb8ff);
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Official Community</title>
+
+<meta name="description"
+content="Join our official community for regular updates, useful resources, and important information.">
+
+<meta name="robots" content="index, follow">
+
+<!-- =========================
+     META PIXEL
+========================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+  if(f.fbq)return;
+
+  n=f.fbq=function(){
+    n.callMethod ?
+    n.callMethod.apply(n,arguments) :
+    n.queue.push(arguments)
+  };
+
+  if(!f._fbq)f._fbq=n;
+
+  n.push=n;
+  n.loaded=true;
+  n.version='2.0';
+  n.queue=[];
+
+  t=b.createElement(e);
+  t.async=true;
+  t.src=v;
+
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
 }
-html,body{background:var(--void)}
-body{font-family:'Rajdhani',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--spectral);min-height:100vh;min-height:100dvh;
-&#x20;&#x20;display:flex;align-items:center;justify-content:center;padding:24px 16px;position:relative;overflow:hidden}
-body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-&#x20;&#x20;background:
-&#x20;&#x20;&#x20;&#x20;radial-gradient(ellipse 65% 42% at 50% 8%,rgba(var(--m-rgb),.34) 0%,transparent 60%),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(circle at 8% 92%,rgba(var(--a-rgb),.24) 0%,transparent 46%),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(circle at 92% 82%,rgba(var(--m2-rgb),.20) 0%,transparent 44%)}
-body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
-&#x20;&#x20;background-image:
-&#x20;&#x20;&#x20;&#x20;radial-gradient(1.5px 1.5px at 20% 30%,rgba(var(--m2-rgb),.7),transparent),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(1.5px 1.5px at 70% 20%,rgba(var(--a2-rgb),.6),transparent),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(1.5px 1.5px at 40% 75%,rgba(var(--m-rgb),.6),transparent),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(1.5px 1.5px at 85% 65%,rgba(var(--a2-rgb),.5),transparent),
-&#x20;&#x20;&#x20;&#x20;radial-gradient(1.5px 1.5px at 15% 60%,rgba(var(--m2-rgb),.5),transparent);
-&#x20;&#x20;animation:drift 9s ease-in-out infinite alternate}
-@keyframes drift{from{transform:translateY(0)}to{transform:translateY(-14px)}}
-.card{position:relative;z-index:2;width:100%;max-width:412px;
-&#x20;&#x20;background:linear-gradient(168deg,var(--panel) 0%,var(--void2) 60%,var(--tail) 100%);
-&#x20;&#x20;border:1px solid rgba(var(--m-rgb),.32);border-radius:22px;padding:34px 24px 28px;text-align:center;
-&#x20;&#x20;box-shadow:0 24px 70px rgba(var(--m-rgb),.28),0 4px 22px rgba(0,0,0,.6),inset 0 1px 0 rgba(var(--m2-rgb),.12);
-&#x20;&#x20;animation:rise .6s cubic-bezier(.16,1,.3,1) both}
-@keyframes rise{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
-.card::before{content:'';position:absolute;top:0;left:12%;right:12%;height:1px;
-&#x20;&#x20;background:linear-gradient(90deg,transparent,var(--monarch2),var(--arcane2),transparent);opacity:.8}
-.crest{font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--arcane2);
-&#x20;&#x20;opacity:.85;margin-bottom:20px;overflow-wrap:anywhere}
-.emblem{position:relative;width:130px;height:130px;margin:0 auto 22px}
-.aura{position:absolute;inset:-14px;border-radius:50%;
-&#x20;&#x20;background:conic-gradient(from 0deg,var(--monarch),var(--arcane),var(--monarch2),var(--arcane2),var(--monarch));
-&#x20;&#x20;filter:blur(9px);opacity:.75;animation:spin 4.5s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-.ring{position:absolute;inset:-5px;border-radius:50%;background:linear-gradient(135deg,var(--monarch2),var(--arcane) 55%,var(--monarch));animation:pulse 2.8s ease-in-out infinite}
-@keyframes pulse{
-&#x20;&#x20;0%,100%{box-shadow:0 0 24px rgba(var(--m-rgb),.55),0 0 46px rgba(var(--a-rgb),.30)}
-&#x20;&#x20;50%{box-shadow:0 0 40px rgba(var(--m2-rgb),.85),0 0 70px rgba(var(--a2-rgb),.45)}}
-.face{position:absolute;inset:0;border-radius:50%;z-index:2;overflow:hidden;background:var(--tail);border:3px solid var(--tail);display:grid;place-items:center}
-.face span{font-family:'Orbitron',sans-serif;font-weight:900;font-size:46px;color:var(--monarch2)}
-.face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-img[src=""]{display:none}
-h1{font-family:'Orbitron',sans-serif;font-weight:900;font-size:clamp(25px,8vw,32px);letter-spacing:2px;line-height:1.1;margin-bottom:6px;overflow-wrap:anywhere;
-&#x20;&#x20;background:linear-gradient(180deg,#fff 0%,var(--tint) 48%,var(--monarch2) 130%);
-&#x20;&#x20;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 14px rgba(var(--m-rgb),.45))}
-.divider{width:60px;height:2px;margin:12px auto 14px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--monarch2),var(--arcane2),transparent)}
-#members{display:inline-block;margin-bottom:18px;padding:5px 12px;border-radius:99px;font-size:13px;font-weight:700;letter-spacing:.6px;color:var(--spectral);
-&#x20;&#x20;background:rgba(var(--m-rgb),.16);border:1px solid rgba(var(--m2-rgb),.35)}
-#members:empty{display:none}
-#jbtn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;position:relative;overflow:hidden;cursor:pointer;text-decoration:none;
-&#x20;&#x20;background:linear-gradient(135deg,var(--monarch) 0%,var(--deep) 45%,var(--arcane) 100%);color:var(--lp-on,#fff);padding:20px 16px;border-radius:14px;
-&#x20;&#x20;border:1px solid rgba(var(--m2-rgb),.45);font-family:'Orbitron',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;overflow-wrap:anywhere;
-&#x20;&#x20;box-shadow:0 14px 34px rgba(var(--m-rgb),.45),inset 0 1px 0 rgba(255,255,255,.28);animation:ctaPulse 2.6s ease-in-out infinite;transition:transform .12s ease}
-@keyframes ctaPulse{
-&#x20;&#x20;0%,100%{box-shadow:0 14px 34px rgba(var(--m-rgb),.45),inset 0 1px 0 rgba(255,255,255,.28)}
-&#x20;&#x20;50%{box-shadow:0 16px 46px rgba(var(--m2-rgb),.68),0 0 30px rgba(var(--a2-rgb),.35),inset 0 1px 0 rgba(255,255,255,.34)}}
-#jbtn::before{content:'';position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);animation:sweep 3s ease-in-out infinite}
-@keyframes sweep{0%{left:-80%}55%,100%{left:130%}}
-#jbtn:active{transform:scale(.97)}
-#jbtn:focus-visible{outline:2px solid var(--arcane2);outline-offset:3px}
-#jbtn.loading,#jbtn.busy{opacity:.6;pointer-events:none}
-.hint{margin-top:16px;font-size:12.5px;letter-spacing:.4px;color:var(--muted);opacity:.8}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+/* SAME PIXEL ID EVERYWHERE */
+fbq('init', '986947277751592');
+
+/* PageView ONLY */
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img
+  height="1"
+  width="1"
+  style="display:none"
+  src="https://www.facebook.com/tr?id=986947277751592&ev=PageView&noscript=1"
+/>
+</noscript>
+
+<!-- =========================
+     STYLE
+========================= -->
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+
+  background:
+    radial-gradient(circle at top, #123746 0%, #061923 45%, #020b11 100%);
+
+  color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 45px 18px;
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+
+  margin: auto;
+  padding: 28px 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(0,198,255,0.15);
+
+  box-shadow:
+    0 0 30px rgba(0,198,255,0.12);
+
+  backdrop-filter: blur(12px);
+}
+
+h1 {
+  margin: 8px 0 18px;
+
+  font-size: 29px;
+  line-height: 1.2;
+}
+
+.description {
+  color: #bfc8cd;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.features {
+  text-align: left;
+
+  margin: 20px 0;
+  padding: 18px;
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: #d8dfe2;
+
+  line-height: 2;
+}
+
+.feature {
+  margin: 2px 0;
+}
+
+.check {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.join-btn {
+  width: 100%;
+
+  border: none;
+
+  padding: 16px 20px;
+
+  border-radius: 30px;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  color: #001018;
+
+  background:
+    linear-gradient(90deg, #00c6ff, #0072ff);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 20px rgba(0,114,255,0.25);
+
+  transition: transform 0.2s;
+}
+
+.join-btn:active {
+  transform: scale(0.97);
+}
+
+.join-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.notice {
+  margin-top: 18px;
+
+  color: #aeb8bd;
+
+  font-size: 13px;
+}
+
+.footer {
+  margin-top: 28px;
+
+  color: #858f94;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
 </style>
-<link rel="preconnect" href="https://connect.facebook.net/" crossorigin><script>window.__LP={"fb":"https:\\/\\/t.me\\/+9EKd_-7vWKs3OWQ1","px":"986947277751592"};(function(C){var d=document,m=d.cookie.match(/(?:^|; )vid=([A-Za-z0-9_-]{16,40})/),v=m?m[1]:'';if(!v){var a=new Uint8Array(16),c=window.crypto||window.msCrypto;if(c&&c.getRandomValues)c.getRandomValues(a);else for(var i=0;i<16;i++)a[i]=Math.random()*256|0;v=btoa(String.fromCharCode.apply(null,a)).replace(/\+/g,'-').replace(/\\//g,'_').replace(/=+$/,'');try{d.cookie='vid='+v+';path=/;max-age=7776000;samesite=lax'+(location.protocol==='https:'?';secure':'')}catch(e){}}C.vid=v})(window.__LP);</script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',window.__LP.px);fbq('track','PageView',{},{eventID:'pv_'+window.__LP.vid});if(window.__LP.act)fbq('track',window.__LP.ev,{content_name:'pixel_activation'},{eventID:'actv_'+window.__LP.oid});</script>
+
 </head>
+
 <body>
-<main class="card">
-&#x20;&#x20;<p class="crest">&#9670; ROCKY BHAI OFFICIAL &#9670;</p>
-&#x20;&#x20;<div class="emblem">
-&#x20;&#x20;&#x20;&#x20;<div class="aura"></div>
-&#x20;&#x20;&#x20;&#x20;<div class="ring"></div>
-&#x20;&#x20;&#x20;&#x20;<div class="face"><span>L</span><img src="https://rockyfamily.site/profile.jpeg" alt="ROCKY BHAI OFFICIAL" width="130" height="130" onerror="this.remove()"></div>
-&#x20;&#x20;</div>
-&#x20;&#x20;<h1>ROCKY BHAI OFFICIAL</h1>
-&#x20;&#x20;<div class="divider"></div>
-&#x20;&#x20;<span id="members">5.8K Members</span>
-&#x20;&#x20;<a id="jbtn" href="https://rockyfamily.site/#" role="button">𝗝𝗢𝗜𝗡 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 <span aria-hidden="true">&#10148;</span></a>
-&#x20;&#x20;<p class="hint">Tap to open Telegram and send your request.</p>
-</main>
-<style>#ys-credit{position:fixed;right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));z-index:2147483000;display:flex;align-items:center;gap:6px;padding:4px 10px 4px 5px;border-radius:99px;pointer-events:none;font:600 11px/1 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;letter-spacing:.02em;color:rgba(255,255,255,.92);background:rgba(12,14,24,.62);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 4px 14px -6px rgba(0,0,0,.6)}#ys-credit svg{display:block;flex:none}#ys-credit b{font-weight:700;color:#fff}</style><div id="ys-credit" role="note"><svg class="" width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="YADAV STORE"><defs><linearGradient id="ysg18" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#4f46e5"/></linearGradient></defs><rect width="24" height="24" rx="6.67" fill="url(#ysg18)"/><g transform="translate(3.6 3.6) scale(.7)"><path d="M12 2.2l8.6 4.9L12 12 3.4 7.1z" fill="#fff"/><path d="M3.4 7.1L12 12v9.8l-8.6-4.9z" fill="#fff" fill-opacity=".62"/><path d="M20.6 7.1L12 12v9.8l8.6-4.9z" fill="#fff" fill-opacity=".32"/><path d="M12.9 4.5L9.8 8h2.1l-.8 2.7 3.1-3.5h-2.1z" fill="#6d4cf0"/></g></svg><span>Made By <b>ShadowStore</b></span></div><script>(function(){var C=window.__LP||{},vid=C.vid,d=document,w=window,b=d.getElementById('jbtn'),P=null,L='',S={},busy=0,went=0;
-function ck(n){var m=d.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):''}
-function ev(e){if(S[e])return;S[e]=1;var j=JSON.stringify({vid:vid,e:e,u:location.href,r:d.referrer||'',fbp:ck('_fbp'),fbc:ck('_fbc')});
-try{if(navigator.sendBeacon&&navigator.sendBeacon('/api/ev',new Blob([j],{type:'text/plain'})))return}catch(x){}
-try{fetch('/api/ev',{method:'POST',body:j,keepalive:true,credentials:'same-origin',headers:{'Content-Type':'text/plain'}})}catch(x){}}
-function get(){if(P)return P;if(!w.fetch)return Promise.resolve('');
-P=fetch('/api/link?vid='+encodeURIComponent(vid)+'&fbp='+encodeURIComponent(ck('_fbp'))+'&fbc='+encodeURIComponent(ck('_fbc')),{credentials:'same-origin',cache:'no-store'})
-.then(function(r){return r.json()}).then(function(j){if(j&&j.link){L=j.link;if(b)b.href=L}return L}).catch(function(){P=null;return ''});return P}
-function nav(u){if(went)return;went=1;setTimeout(function(){went=0;busy=0;if(b){b.removeAttribute('aria-busy');b.classList.remove('loading')}},2500);u=u||C.fb;if(u)location.href=u}
-function warm(){if(warm.d)return;warm.d=1;get()}
-if(b){if(C.fb)b.href=C.fb;b.addEventListener('click',function(e){e.preventDefault();if(busy)return;busy=1;went=0;b.setAttribute('aria-busy','true');b.classList.add('loading');
-try{if(w.fbq){fbq('track','ViewContent',{},{eventID:'vc_'+vid});fbq('track','Lead',{content_name:'Telegram Join Button Click'},{eventID:'lead_'+vid});fbq('track','Subscribe',{content_name:'Telegram Join Button Click'},{eventID:'sub_'+vid})}}catch(x){}ev('ViewContent');
-if(L)return nav(L);var t=setTimeout(function(){nav(L)},1500);get().then(function(l){clearTimeout(t);nav(l)})})}
-['scroll','touchstart','pointerdown','keydown'].forEach(function(n){w.addEventListener(n,warm,{passive:true,capture:true,once:true})});
-setTimeout(warm,2500);
-function pv(){ev('PageView')}if(d.readyState==='complete')setTimeout(pv,200);else w.addEventListener('load',function(){setTimeout(pv,200)});setTimeout(pv,3000);
-})();</script>
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>
+      𝐕𝐈𝐏 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 𝐑𝐎𝐂𝐊𝐘 𝐁𝐎𝐒𝐒
+    </h1>
+
+    <p class="description">
+      Stay updated with the latest information,
+      helpful resources, and important community
+      updates in one place.
+    </p>
+
+    <div class="features">
+
+      <div class="feature">
+        <span class="check">✔</span>
+        Regular Updates
+      </div>
+
+      <div class="feature">
+        <span class="check">✔</span>
+        Helpful Resources
+      </div>
+
+      <div class="feature">
+        <span class="check">✔</span>
+        Active Community
+      </div>
+
+    </div>
+
+    <!--
+      IMPORTANT:
+      Telegram link is opened by JavaScript
+      only after the user actually clicks.
+    -->
+
+    <button
+      id="joinButton"
+      class="join-btn"
+      type="button">
+
+      JOIN THE TELEGRAM 
+
+    </button>
+
+    <div class="notice">
+      Limited Access – For community members
+    </div>
+
+    <div class="footer">
+
+      This page is for informational purposes only.<br>
+
+      We are not affiliated with any official organization.
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     BUTTON TRACKING
+========================= -->
+
+<script>
+
+const joinButton = document.getElementById("joinButton");
+
+let leadSent = false;
+
+joinButton.addEventListener("click", function () {
+
+  /*
+    Prevent multiple clicks from generating
+    multiple Lead events.
+  */
+  if (leadSent) {
+    return;
+  }
+
+  leadSent = true;
+
+  joinButton.disabled = true;
+  joinButton.innerText = "Opening Community...";
+
+
+  /*
+    Send Lead ONLY after the user
+    physically clicks the button.
+  */
+
+  fbq('track', 'Lead', {
+    content_name: 'Community Join',
+    value: 1,
+    currency: 'INR'
+  });
+
+
+  /*
+    Small delay gives the browser time
+    to send the Meta event before Telegram opens.
+  */
+
+  setTimeout(function () {
+
+    window.location.href =
+      "https://t.me/+9EKd_-7vWKs3OWQ1";
+
+  }, 200);
+
+});
+
+</script>
+
 </body>
 </html>
